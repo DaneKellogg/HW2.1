@@ -241,6 +241,11 @@ puts "Movies"
 puts "======"
 puts ""
 
+movie - Movie.all
+for movie in movies
+    puts "#{movie.title} #{movie.year} - #{movie.rating} - #{Person.where(id: movie.person_id)}"
+end
+
 # Query the movies data and loop through the results to display the movies output
 # TODO!
 
@@ -249,6 +254,11 @@ puts ""
 puts "Top Cast"
 puts "========"
 puts ""
+
+role = Role.all
+for character_name in role
+    puts "#{Movie.where(id: character.movie_id)} - #{(Person.where(id: character.person_id)} - #{character.character_name}"
+end
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
